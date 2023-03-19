@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Post } from '../interfaces/post.interface'
+import { Post, POSTS } from '../interfaces/post.interface'
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  posts: Post[] = [];
+  posts: Post[] = POSTS
 
   create(post: Post): void {
     this.posts.push(post);
