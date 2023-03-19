@@ -15,7 +15,7 @@ export class ListaPostsComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
-    this.posts = this.postService.getAll();
+    this.posts = POSTS
     this.categorias = [...new Set(this.posts.map(post => post.categoria))];
   }
 
