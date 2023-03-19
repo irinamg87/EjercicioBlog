@@ -1,0 +1,17 @@
+<h2>Lista de Posts</h2>
+<div>
+    <button (click)="seleccionarCategoria('')">Todos</button>
+    <button *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria)">
+        {{ categoria }}
+    </button>
+</div>
+<ul>
+    <li *ngFor="let post of posts | filtroCategoria: categoriaSeleccionada">
+        <h3>{{ post.titulo }}</h3>
+        <p>{{ post.texto }}</p>
+        <p>{{ post.autor }}</p>
+        <img *ngIf="post.imagen" [src]="post.imagen" alt="{{ post.titulo }}">
+        <p>{{ post.fecha }}</p>
+        <p>{{ post.categoria }}</p>
+    </li>
+</ul>
