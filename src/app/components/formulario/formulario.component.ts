@@ -14,7 +14,7 @@ export class FormularioComponent implements OnInit {
     texto: '',
     autor: '',
     imagen: '',
-    fecha: '',
+    fecha: new Date(),
     categoria: ''
   };
 
@@ -32,7 +32,7 @@ export class FormularioComponent implements OnInit {
         texto: '',
         autor: '',
         imagen: '',
-        fecha: '',
+        fecha: new Date(),
         categoria: ''
       };
     }
